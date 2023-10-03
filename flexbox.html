@@ -70,7 +70,25 @@
 
       .el{
            flex-shrink: 1;
-           flex-grow: 1;
+           /* flex-grow: 1; */
+
+           flex:1;
+
+           /*flex:1 demek aslında flex grow 1 demektir. Best practice de flex:1 kullanılır.
+           genellikle flex grow kullanmayız. 
+           
+           best practice
+
+           flex: 0 0 200px;
+1. değer flex grow'dur. elemanların büyümesine izin verme
+2. değer flex shrinktir. elemanların küçülmesine izin verme.
+3. değer flex basis. elemanlara genişlik ver.
+
+           */
+
+flex: 0 0 200px;
+/*best practice */
+
         }
 
 
@@ -93,8 +111,9 @@
           order: -1; /*baştan ileri gider*/
         }
 
-      }
-    </style>
+
+
+        </style>
   </head>
   <body>
     <div class="container">
