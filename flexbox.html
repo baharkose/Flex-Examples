@@ -46,13 +46,13 @@
         justify-content: flex-start;
 
         /* new version for creating space between items */
-        gap:30px;
+        gap:30px;}
 
         /*old version for creating space
         margin-right: 30px;
-        
+
         */
-        .el{
+        
 
           /* 
           DEFAULTS
@@ -62,18 +62,27 @@
 
            /* flex-basis: 200px;   */
            /*tüm maddelere yüz piksel genişlik verir. */
-           flex-shrink: 0; /*gerektiğinde flexbox'ın elemanı küçültmesine izin verme  */
-           flex-grow: 1 /*gerktiğinde elemanların büyümesine izin vermek. kendisi otomaitk elemanları genişletir.
+           /* flex-shrink: 0; gerektiğinde flexbox'ın elemanı küçültmesine izin verme  */
+           /* flex-grow: 1 /*gerktiğinde elemanların büyümesine izin vermek. kendisi otomaitk elemanları genişletir.
            eğer bir elemana bunu verirsek o zaman yalnızca bir eleman genişler ve tüm alanı kaplar.
-           
+           bütün elemanların aynı boyutta olmasını sağlar.
            */ 
+
+      .el{
+           flex-shrink: 1;
+           flex-grow: 1;
         }
 
 
       
         .el--1{
           align-self: flex-start; /*maddeyi en tepeye hizalar.*/
-order:2; /*sondan geriye gider */        }
+          order:2; /*sondan geriye gider */ 
+          flex-grow: 3; /*diğerlerinin üç katı genişliğe sahip olur */
+
+
+
+}
 
         .el--5{
           align-self: stretch; /*maddeyi yukarıdan aşağıya genişletir.*/
